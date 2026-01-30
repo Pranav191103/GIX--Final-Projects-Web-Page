@@ -4,7 +4,10 @@ function uniq(arr) {
 
 function getAllTags() {
   const courses = [...document.querySelectorAll(".course")];
-  const tags = courses.flatMap(c => (c.dataset.tags || "").split(",").map(t => t.trim()).filter(Boolean));
+  const tags = courses.flatMap(c => (c.dataset.tags || "")
+    .split(",")
+    .map(t => t.trim())
+    .filter(Boolean));
   return uniq(tags);
 }
 
@@ -66,6 +69,7 @@ function setupCopyButtons() {
     <div class="grid">
       <div class="card">
         <h3>Curriculum</h3>
+        <div class="img-slot"><div class="img-placeholder">Add curriculum image here</div></div>
         <ul>
           <li>Topic 1</li>
           <li>Topic 2</li>
@@ -74,6 +78,7 @@ function setupCopyButtons() {
 
       <div class="card">
         <h3>Prerequisites</h3>
+        <div class="img-slot"><div class="img-placeholder">Add prerequisites image here</div></div>
         <ul>
           <li>Prereq 1</li>
           <li>Prereq 2</li>
@@ -82,6 +87,7 @@ function setupCopyButtons() {
 
       <div class="card">
         <h3>Hardware & Resources Provided</h3>
+        <div class="img-slot"><div class="img-placeholder">Add resources image here</div></div>
         <ul>
           <li>Item 1</li>
           <li>Item 2</li>
@@ -90,6 +96,7 @@ function setupCopyButtons() {
 
       <div class="card">
         <h3>Final Projects</h3>
+        <div class="img-slot"><div class="img-placeholder">Add final projects collage here</div></div>
         <ul class="projects">
           <li class="project">
             <div class="project-title">
